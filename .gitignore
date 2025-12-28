@@ -13,8 +13,8 @@ test-results/
 *.tsbuildinfo
 
 # Env/config secrets (if you use them)
-.env
-.env.*
+#.env
+#.env.*
 
 
 /test-results/
