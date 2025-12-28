@@ -1,7 +1,22 @@
 
 # Playwright
-/node_modules/
-/report/
+node_modules/
+
+# Playwright/Cucumber reports and test outputs
+reports/
+playwright-report/
+test-results/
+
+# Common artifacts
+*.log
+*.tmp
+*.tsbuildinfo
+
+# Env/config secrets (if you use them)
+.env
+.env.*
+
+
 /test-results/
 /playwright-report/
 /blob-report/
