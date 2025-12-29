@@ -2,8 +2,11 @@ import { Given, When, Then } from "@cucumber/cucumber";
 import { pageFixture } from "./hooks/browserContextFixture";
 import { expect } from "@playwright/test";
 import { faker } from "@faker-js/faker";
+import { CucumberWorld } from "./world/CucumberWorld";
+import logger from '../logger/logger';
 
-When('I type a first name', async () => {
+When('I type a first name', async function (this: CucumberWorld) {
+    logger.info(`Base URL stored in Cucumber World: ${this.getURL()}`)
     await pageFixture.page.getByPlaceholder('First Name').fill("Joe");
 });
 
@@ -71,19 +74,26 @@ When('I type specific text {string} and a number {int} within the comment input 
 
 
 //Random Data - Faker
-When('I type a random first name', async () => {
+When('I type a random first name', async function (this: CucumberWorld) {
     const randomFirstName = faker.person.firstName();
+    this.setFirstName(randomFirstName);
     await pageFixture.page.getByPlaceholder('First Name').fill(randomFirstName);
 });
 
-When('I type a random last name', async () => {
+When('I type a random last name', async function (this: CucumberWorld) {
     const randomLastName = faker.person.lastName();
+    this.setLastName(randomLastName);
     await pageFixture.page.getByPlaceholder('Last Name').fill(randomLastName);
 });
 
-When('I enter a random email address', async () => {
+When('I enter a random email address', async function (this: CucumberWorld) {
     const randomEmail = faker.internet.email();
+    this.setEmailAddress(randomEmail);
     await pageFixture.page.getByPlaceholder('Email Address').fill(randomEmail);
+});
+
+When('I type a random comment', async function (this: CucumberWorld) {
+    await pageFixture.page.getByPlaceholder('Comments').fill(`Please could you contact me? \n Thanks ${this.getFirstName()} ${this.getLastName()} ${this.getEmailAddress()}`);
 });
 
 

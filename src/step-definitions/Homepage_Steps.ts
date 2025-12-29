@@ -1,14 +1,16 @@
 import { Given, When } from "@cucumber/cucumber";
 import { pageFixture } from "./hooks/browserContextFixture";
 import logger from '../logger/logger';
+import { CucumberWorld } from "./world/CucumberWorld";
 
 const url = "https://www.webdriveruniversity.com/";
 
-Given('I navigate to the webdriveruniversity homepage', async () => {
+Given('I navigate to the webdriveruniversity homepage', async function (this: CucumberWorld) {
     try {
         //Access URL
         await pageFixture.page.goto(url);
         logger.info('Accessing URL: ' + url);
+        this.setUrl(url);
         //throw new Error('Simulating an error during navigation');
     } catch (error: any) {
         logger.error('An error has occurred: ' + error.message);
