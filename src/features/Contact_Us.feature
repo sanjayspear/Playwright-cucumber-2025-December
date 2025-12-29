@@ -22,7 +22,6 @@ Feature: WebdriverUniversity.com - Contact Us Page
         And I click on the submit button
         Then I should be presented with a unsuccessful contact us message
 
-
     Scenario: Valid Contact Us Form Submission - Using Specific Data
         And I type a specific first name "Sarah"
         And I type a specific last name "Woods"
@@ -30,7 +29,6 @@ Feature: WebdriverUniversity.com - Contact Us Page
         And I type specific text "Hello world" and a number 2 within the comment input field
         And I click on the submit button
         Then I should be presented with a successful contact us submission message
-
 
     Scenario: Contact Us Form Submission - Using Random Data
         And I type a random first name
@@ -40,7 +38,7 @@ Feature: WebdriverUniversity.com - Contact Us Page
         And I click on the submit button
         Then I should be presented with a successful contact us submission message
 
-
+    @smoke
     Scenario Outline: Validate Contact Us Page
         And I type a first name <firstName> and a last name <lastName>
         And I type a email address '<emailAddress>' and a comment '<comment>'

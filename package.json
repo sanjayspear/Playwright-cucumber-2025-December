@@ -12,12 +12,14 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@colors/colors": "^1.6.0",
     "@cucumber/cucumber": "^12.4.0",
     "@faker-js/faker": "^9.9.0",
     "@playwright/test": "^1.57.0",
     "@types/node": "^25.0.3",
     "dotenv": "^17.2.3",
     "rimraf": "^6.1.2",
-    "ts-node": "^10.9.2"
+    "ts-node": "^10.9.2",
+    "winston": "^3.19.0"
   }
 }
