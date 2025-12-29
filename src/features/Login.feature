@@ -12,7 +12,7 @@ Feature: Webdriveruniversity - Login Page
 
         Examples:
             | username  | password     | expectedAlertText    |
-            | webdriver | webdriver123 | validation succeeded5555 |
+            | webdriver | webdriver123 | validation succeeded |
             | webdriver | Password123  | validation failed    |
 
         @smoke
