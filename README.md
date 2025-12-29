@@ -16,6 +16,6 @@ Updated command with simpler approach:
 $ npm run cucumber smoke
 $ npm run cucumber regression
 $ npm run cucumber login
-$ npm run cucumber contactus
+$ npm run cucumber contactUs
 
 NOTE: Use `@ignore` tag to ignore any of the test script
