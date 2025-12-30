@@ -140,4 +140,23 @@ open reports/report.html
 - **Module not found**: Run `npm install` again
 - **No reports**: Ensure `reports/` directory exists
 
+---
+
+## Learning Resources
+
+This framework was built following best practices from:
+
+- **[Playwright with Cucumber BDD TypeScript - Beginner to Pro](https://capgemini.udemy.com/course/playwright-with-cucumber-bdd-typescript-beginner-to-pro/)** (Udemy)
+  - Comprehensive course covering Playwright fundamentals through advanced BDD testing patterns
+  - Recommended for understanding the framework's design philosophy and implementation patterns
+
+**Additional Documentation**
+
+For more detailed information, see:
+- [START_HERE.md](START_HERE.md) - Navigation guide for all documentation
+- [DOCUMENTATION.md](DOCUMENTATION.md) - Complete framework reference
+- [DEVELOPER_GUIDE.md](DEVELOPER_GUIDE.md) - Code examples and patterns
+- [FRAMEWORK_QA_BY_DIFFICULTY.md](FRAMEWORK_QA_BY_DIFFICULTY.md) - 33 Q&As from beginner to expert
+- [STANDARDS.md](STANDARDS.md) - Best practices and coding standards
+
 Happy Testing! 🚀
